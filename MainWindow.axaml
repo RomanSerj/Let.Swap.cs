@@ -1,0 +1,77 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Let.Swap_cs.MainWindow"
+        Title="Let.Swap"
+        Width="350" Height="560"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False">
+
+    <StackPanel Margin="20" Spacing="8">
+
+        <TextBlock Text="Выбор сочетания клавиш для транслитерации"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"/>
+
+        <ComboBox x:Name="ComboTran"
+                  HorizontalAlignment="Stretch"
+                  SelectedIndex="0">
+            <ComboBoxItem>Alt+Z</ComboBoxItem>
+            <ComboBoxItem>Ctrl+Alt+Z</ComboBoxItem>
+        </ComboBox>
+
+        <CheckBox x:Name="ExtraCheck"
+                  Content="Доп функции"
+                  HorizontalAlignment="Center"
+                  Margin="0,8,0,8"/>
+
+        <TextBlock Text="Выбор сочетания клавиш для в. регистра"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"/>
+
+        <ComboBox x:Name="ComboUp"
+                  HorizontalAlignment="Stretch"
+                  SelectedIndex="0">
+            <ComboBoxItem>Alt+X</ComboBoxItem>
+            <ComboBoxItem>Ctrl+Alt+X</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Text="Выбор сочетания клавиш для н. регистра"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"/>
+
+        <ComboBox x:Name="ComboLw"
+                  HorizontalAlignment="Stretch"
+                  SelectedIndex="0">
+            <ComboBoxItem>Alt+Q</ComboBoxItem>
+            <ComboBoxItem>Ctrl+Alt+Q</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Text="Выбор сочетания клавиш для обратного регистра"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"/>
+
+        <ComboBox x:Name="ComboBw"
+                  HorizontalAlignment="Stretch"
+                  SelectedIndex="0">
+            <ComboBoxItem>Alt+B</ComboBoxItem>
+            <ComboBoxItem>Ctrl+Alt+B</ComboBoxItem>
+        </ComboBox>
+
+        <Button x:Name="ApplyButton"
+                Content="Применить"
+                HorizontalAlignment="Stretch"
+                Margin="0,16,0,0"
+                Click="OnApplyClick"/>
+
+        <Button x:Name="MinimizeButton"
+                Content="Свернуть в трей"
+                HorizontalAlignment="Stretch"
+                Click="OnMinimizeClick"/>
+
+        <Button x:Name="ExitButton"
+                Content="Выход"
+                HorizontalAlignment="Stretch"
+                Click="OnExitClick"/>
+
+    </StackPanel>
+</Window>
